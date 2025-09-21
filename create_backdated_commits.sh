@@ -11,7 +11,7 @@
 for i in $(seq 1 12); do
   # 00 05 10 … 55
   min=$(printf '%02d' $(((i-1)*5)))
-  ts="2025-06-10T06:${min}:00"
+  ts="2025-05-10T06:${min}:00"
   echo "Backdated commit $i at $ts" >> README.md
   git add README.md
   GIT_AUTHOR_DATE="$ts" GIT_COMMITTER_DATE="$ts" \
